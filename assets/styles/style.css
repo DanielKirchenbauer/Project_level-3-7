@@ -6,6 +6,14 @@
 
 /* === Imports === */
 
+/* === Global Settings === */
+
+body {
+    /* overflow: hidden; */
+}
+img {
+    width: 100%;
+}
 /* === Header === */
 
 header {
@@ -59,18 +67,13 @@ header article {
     padding: 30px;
 }
 
-.gallery div:nth-last-of-type(1) {
+.h4_spacebetween {
     display: flex;
     justify-content: space-between;
     justify-items: baseline;
 }
 
-.gallery div:nth-last-of-type(1) div {
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-}
-.gallery div:nth-last-of-type(1) div:nth-of-type(2) {
+.h4_spacebetween > div:nth-of-type(2) {
     border: 1px solid;
     padding: 10px;
 }
@@ -78,15 +81,12 @@ header article {
 .gallery article {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    row-gap: 20px;
-    column-gap: 20px;
+    row-gap: 30px;
+    column-gap: 30px;
+    position: relative;
+    overflow: hidden;
 }
 
-
-.gallery article div:nth-of-type(6) {
-       display: flex;
-    flex-direction: column;
-}
 
 .gallery img {
     object-fit: cover;
@@ -94,7 +94,54 @@ header article {
     width: 100%;
 }
 
-/* === Header === */
+.test {
+    position: absolute;
+    left: 2000px
+}
+
+.relativ_container:hover img {
+    filter: grayscale(100%);
+    transform: scale(1.5);
+    object-fit:contain;
+}
+
+/* === Parallax Section === */
+
+.parallax {
+    background-image: url(../images/parallax_chair.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.parallax > article {
+    background-color: #00000033;
+}
+
+.parallax > article > div {
+    color: #FFFFFF;
+    margin-bottom: 100px;
+}
+
+.parallax > article > article {
+    color: #FFFFFF;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* === Treppe === */
+
+.treppe {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    }
 
 /* === Header === */
 
